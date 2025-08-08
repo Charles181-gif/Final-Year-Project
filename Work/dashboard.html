@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - GhanaHealth+</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-brand">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>GhanaHealth+</h1>
+                    <p>Patient Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Main</h3>
+                    <a href="dashboard.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                    <a href="appointments.html" class="nav-link">
+                        <i class="fas fa-calendar-check"></i>
+                        Appointments
+                        <span class="badge">2</span>
+                    </a>
+                    <a href="prescriptions.html" class="nav-link">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        Prescriptions
+                    </a>
+                    <a href="medical-records.html" class="nav-link">
+                        <i class="fas fa-file-medical"></i>
+                        Medical Records
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Health</h3>
+                    <a href="health-metrics.html" class="nav-link">
+                        <i class="fas fa-heartbeat"></i>
+                        Health Metrics
+                    </a>
+                    <a href="medication-tracker.html" class="nav-link">
+                        <i class="fas fa-pills"></i>
+                        Medication Tracker
+                    </a>
+                    <a href="family-health.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        Family Health
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Account</h3>
+                    <a href="profile.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        Profile Settings
+                    </a>
+                    <a href="billing.html" class="nav-link">
+                        <i class="fas fa-credit-card"></i>
+                        Billing & Payments
+                    </a>
+                    <a href="support.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i>
+                        Support
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="emergency-contact">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Emergency</strong>
+                        <span>+233 24 123 4567</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            <!-- Top Navigation Bar -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 class="page-title">Dashboard</h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    
+                    <div class="notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="notification-dropdown">
+                            <div class="dropdown-header">
+                                <h4>Notifications</h4>
+                                <button class="mark-all-read">Mark all as read</button>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <p>Your appointment with Dr. Asante is tomorrow at 10:30 AM</p>
+                                        <span class="notification-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <!-- More notifications -->
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <div class="user-avatar">AM</div>
+                        <div class="user-info">
+                            <span class="user-name">Akosua Mensah</span>
+                            <span class="user-role">Patient</span>
+                        </div>
+                        <div class="user-dropdown">
+                            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Banner -->
+                <section class="welcome-banner">
+                    <div class="welcome-content">
+                        <h2>Welcome back, Akosua!</h2>
+                        <p>Here's your health summary for today, August 8, 2024</p>
+                        <div class="health-status">
+                            <div class="status-item good">
+                                <i class="fas fa-heart"></i>
+                                <span>Good Health</span>
+                            </div>
+                            <div class="status-item warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>1 Medication Due</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-actions">
+                        <a href="book-appointment.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-plus"></i>
+                            Book New Appointment
+                        </a>
+                        <a href="emergency.html" class="btn btn-danger">
+                            <i class="fas fa-ambulance"></i>
+                            Emergency Help
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Stats Cards -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Upcoming Appointments</h3>
+                            <div class="stat-value">2</div>
+                            <a href="appointments.html" class="stat-link">View all</a>
+                        </div>
+                    </div>
+                    
+                    <!-- More stat cards... -->
+                </section>
+
+                <!-- Upcoming Appointments -->
+                <section class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Upcoming Appointments</h3>
+                        <a href="appointments.html" class="btn btn-outline">View All</a>
+                    </div>
+                    
+                    <div class="appointments-list">
+                        <!-- Appointment cards would go here -->
+                    </div>
+                </section>
+
+                <!-- Health Summary -->
+                <section class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Health Summary</h3>
+                        <div class="time-filter">
+                            <select>
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                                <option selected>Last 6 months</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="health-summary-grid">
+                        <!-- Health charts would go here -->
+                    </div>
+                </section>
+
+                <!-- Current Medications -->
+                <section class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Current Medications</h3>
+                        <a href="prescriptions.html" class="btn btn-outline">View All</a>
+                    </div>
+                    
+                    <div class="medications-grid">
+                        <!-- Medication cards would go here -->
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    
+                    <div class="quick-actions-grid">
+                        <!-- Quick action cards would go here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Health Tip Modal -->
+    <div class="modal health-tip-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3>Daily Health Tip</h3>
+                <p>August 8, 2024</p>
+            </div>
+            <div class="modal-body">
+                <img src="images/health-tip.jpg" alt="Health Tip">
+                <h4>Stay Hydrated in Ghana's Heat</h4>
+                <p>With temperatures rising, remember to drink at least 2 liters of water daily. Dehydration can lead to headaches, fatigue, and more serious health issues.</p>
+                <div class="tip-actions">
+                    <button class="btn btn-primary">Got It</button>
+                    <button class="btn btn-outline">Remind Me Later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

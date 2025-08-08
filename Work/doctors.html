@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Doctors - GhanaHealth+</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/doctors.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as homepage) -->
+
+    <main class="doctors-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Find Certified Doctors</h1>
+                <p>Connect with Ghana Medical Association verified healthcare providers</p>
+            </div>
+            
+            <!-- Advanced Search Filters -->
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="specialty">Specialty</label>
+                    <select id="specialty">
+                        <option value="">All Specialties</option>
+                        <option value="general">General Practitioner</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <!-- More specialties -->
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option value="">All Locations</option>
+                        <option value="accra">Accra</option>
+                        <option value="kumasi">Kumasi</option>
+                        <!-- More locations -->
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option value="">All Languages</option>
+                        <option value="english">English</option>
+                        <option value="twi">Twi</option>
+                        <option value="ga">Ga</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="availability">Availability</label>
+                    <select id="availability">
+                        <option value="">Any Time</option>
+                        <option value="now">Available Now</option>
+                        <option value="today">Today</option>
+                        <option value="weekend">Weekend</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" id="applyFilters">
+                    <i class="fas fa-filter"></i> Apply Filters
+                </button>
+                
+                <button class="btn btn-outline" id="resetFilters">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
+            
+            <!-- Search Results -->
+            <div class="search-results">
+                <div class="results-header">
+                    <h2>245 Doctors Available</h2>
+                    <div class="sort-options">
+                        <label>Sort by:</label>
+                        <select id="sortBy">
+                            <option value="rating">Highest Rating</option>
+                            <option value="experience">Most Experienced</option>
+                            <option value="price">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="doctors-grid">
+                    <!-- Doctor Card 1 -->
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <img src="images/doctor1.jpg" alt="Dr. Akosua Darko">
+                            <div class="badge-verified">
+                                <i class="fas fa-check-circle"></i> Verified
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Akosua Darko</h3>
+                            <p class="specialty">General Practitioner</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.8 (124 reviews)</span>
+                            </div>
+                            <div class="doctor-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Korle-Bu Teaching Hospital, Accra</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>15+ years experience</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-comments"></i>
+                                    <span>Speaks: English, Twi</span>
+                                </div>
+                            </div>
+                            <div class="doctor-actions">
+                                <div class="consultation-price">
+                                    <span>From</span>
+                                    <div class="price">GH₵50</div>
+                                </div>
+                                <button class="btn btn-primary btn-book">
+                                    <i class="fas fa-calendar-check"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="doctor-details">
+                            <h4>About Dr. Darko</h4>
+                            <p>Dr. Akosua Darko is a board-certified general practitioner with over 15 years of experience...</p>
+                            <div class="consultation-options">
+                                <h5>Consultation Options:</h5>
+                                <div class="option">
+                                    <span>Video Consultation</span>
+                                    <span>GH₵50 - GH₵80</span>
+                                </div>
+                                <div class="option">
+                                    <span>Chat Consultation</span>
+                                    <span>GH₵20 - GH₵40</span>
+                                </div>
+                                <div class="option">
+                                    <span>In-Person Visit</span>
+                                    <span>GH₵100 - GH₵150</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-view-profile">
+                                <i class="fas fa-user-md"></i> View Full Profile
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- More doctor cards... -->
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-nav" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <div class="page-numbers">
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <span>...</span>
+                        <button class="page-number">8</button>
+                    </div>
+                    <button class="page-nav">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Why Choose Our Doctors -->
+            <div class="why-choose">
+                <h2>Why Choose GhanaHealth+ Doctors</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h3>Verified Credentials</h3>
+                        <p>All doctors are licensed by the Ghana Medical and Dental Council</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Patient-Rated</h3>
+                        <p>Read genuine reviews from other patients</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Multilingual</h3>
+                        <p>Consult in English or local languages</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Flexible Scheduling</h3>
+                        <p>Book appointments 24/7 to suit your schedule</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as homepage) -->
+
+    <script src="js/main.js"></script>
+    <script src="js/doctors.js"></script>
+</body>
+</html>

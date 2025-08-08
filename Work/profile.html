@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GhanaHealth+</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar would be included here -->
+        
+        <main class="dashboard-main">
+            <!-- Header would be included here -->
+            
+            <div class="dashboard-content">
+                <div class="profile-header">
+                    <h1>My Profile</h1>
+                    <div class="profile-actions">
+                        <button class="btn btn-outline" id="editProfileBtn">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar">
+                            <div class="avatar-image" id="avatarImage">AM</div>
+                            <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                            <button class="btn btn-outline btn-small avatar-upload-btn">
+                                <i class="fas fa-camera"></i> Change Photo
+                            </button>
+                        </div>
+
+                        <div class="profile-menu">
+                            <a href="#" class="profile-menu-item active" data-section="personal">
+                                <i class="fas fa-user"></i> Personal Information
+                            </a>
+                            <a href="#" class="profile-menu-item" data-section="medical">
+                                <i class="fas fa-file-medical"></i> Medical Information
+                            </a>
+                            <a href="#" class="profile-menu-item" data-section="security">
+                                <i class="fas fa-lock"></i> Security
+                            </a>
+                            <a href="#" class="profile-menu-item" data-section="notifications">
+                                <i class="fas fa-bell"></i> Notifications
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="profile-content">
+                        <!-- Personal Information Section -->
+                        <div class="profile-section active" id="personalSection">
+                            <h2>Personal Information</h2>
+                            <form id="personalInfoForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <p class="view-mode" id="firstNameView">Akosua</p>
+                                        <input type="text" id="firstNameEdit" name="firstName" value="Akosua" class="edit-mode" style="display: none;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <p class="view-mode" id="lastNameView">Mensah</p>
+                                        <input type="text" id="lastNameEdit" name="lastName" value="Mensah" class="edit-mode" style="display: none;">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <p class="view-mode" id="emailView">akosua.mensah@example.com</p>
+                                    <input type="email" id="emailEdit" name="email" value="akosua.mensah@example.com" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <p class="view-mode" id="phoneView">0241234567</p>
+                                    <input type="tel" id="phoneEdit" name="phone" value="0241234567" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <p class="view-mode" id="dobView">15/03/1985</p>
+                                    <input type="date" id="dobEdit" name="dob" value="1985-03-15" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <p class="view-mode" id="genderView">Female</p>
+                                    <select id="genderEdit" name="gender" class="edit-mode" style="display: none;">
+                                        <option value="female" selected>Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <p class="view-mode" id="addressView">123 Main St, Accra, Ghana</p>
+                                    <textarea id="addressEdit" name="address" class="edit-mode" style="display: none;">123 Main St, Accra, Ghana</textarea>
+                                </div>
+
+                                <div class="form-actions edit-mode" style="display: none;">
+                                    <button type="button" class="btn btn-outline" id="cancelPersonalEdit">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Medical Information Section -->
+                        <div class="profile-section" id="medicalSection" style="display: none;">
+                            <h2>Medical Information</h2>
+                            <form id="medicalInfoForm">
+                                <div class="form-group">
+                                    <label>Blood Type</label>
+                                    <p class="view-mode" id="bloodTypeView">A+</p>
+                                    <select id="bloodTypeEdit" name="bloodType" class="edit-mode" style="display: none;">
+                                        <option value="">Unknown</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Allergies</label>
+                                    <p class="view-mode" id="allergiesView">Penicillin, Peanuts</p>
+                                    <textarea id="allergiesEdit" name="allergies" class="edit-mode" style="display: none;">Penicillin, Peanuts</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Chronic Conditions</label>
+                                    <p class="view-mode" id="conditionsView">Hypertension</p>
+                                    <textarea id="conditionsEdit" name="conditions" class="edit-mode" style="display: none;">Hypertension</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Current Medications</label>
+                                    <p class="view-mode" id="medicationsView">Amlodipine 5mg daily</p>
+                                    <textarea id="medicationsEdit" name="medications" class="edit-mode" style="display: none;">Amlodipine 5mg daily</textarea>
+                                </div>
+
+                                <div class="form-actions edit-mode" style="display: none;">
+                                    <button type="button" class="btn btn-outline" id="cancelMedicalEdit">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Doctor-specific information (only shown for doctors) -->
+                        <div class="profile-section" id="professionalSection" style="display: none;">
+                            <h2>Professional Information</h2>
+                            <form id="professionalInfoForm">
+                                <div class="form-group">
+                                    <label>Specialty</label>
+                                    <p class="view-mode" id="specialtyView">Cardiology</p>
+                                    <select id="specialtyEdit" name="specialty" class="edit-mode" style="display: none;">
+                                        <option value="general">General Practitioner</option>
+                                        <option value="cardiology" selected>Cardiology</option>
+                                        <option value="pediatrics">Pediatrics</option>
+                                        <option value="obgyn">OB/GYN</option>
+                                        <option value="neurology">Neurology</option>
+                                        <option value="dermatology">Dermatology</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Medical License Number</label>
+                                    <p class="view-mode" id="licenseView">GMC-123456</p>
+                                    <input type="text" id="licenseEdit" name="license" value="GMC-123456" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Years of Experience</label>
+                                    <p class="view-mode" id="experienceView">12 years</p>
+                                    <input type="number" id="experienceEdit" name="experience" value="12" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Hospital/Clinic</label>
+                                    <p class="view-mode" id="hospitalView">Korle-Bu Teaching Hospital</p>
+                                    <input type="text" id="hospitalEdit" name="hospital" value="Korle-Bu Teaching Hospital" class="edit-mode" style="display: none;">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Biography</label>
+                                    <p class="view-mode" id="bioView">Dr. Osei is a board-certified cardiologist with over 12 years of experience...</p>
+                                    <textarea id="bioEdit" name="bio" class="edit-mode" style="display: none;">Dr. Osei is a board-certified cardiologist with over 12 years of experience...</textarea>
+                                </div>
+
+                                <div class="form-actions edit-mode" style="display: none;">
+                                    <button type="button" class="btn btn-outline" id="cancelProfessionalEdit">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Security Section -->
+                        <div class="profile-section" id="securitySection" style="display: none;">
+                            <h2>Security Settings</h2>
+                            <form id="securityForm">
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="currentPassword" name="currentPassword">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="newPassword" name="newPassword" minlength="8">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="password-strength">
+                                        <span class="strength-bar"></span>
+                                        <span class="strength-bar"></span>
+                                        <span class="strength-bar"></span>
+                                        <span class="strength-text"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Confirm New Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                                        <button type="button" class="toggle-password" aria-label="Show password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Change Password</button>
+                                </div>
+                            </form>
+
+                            <div class="security-options">
+                                <h3>Two-Factor Authentication</h3>
+                                <div class="option-item">
+                                    <div class="option-info">
+                                        <h4>SMS Verification</h4>
+                                        <p>Receive a verification code via SMS</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="option-item">
+                                    <div class="option-info">
+                                        <h4>Authenticator App</h4>
+                                        <p>Use an app like Google Authenticator</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Section -->
+                        <div class="profile-section" id="notificationsSection" style="display: none;">
+                            <h2>Notification Preferences</h2>
+                            <form id="notificationsForm">
+                                <div class="notification-category">
+                                    <h3>Appointments</h3>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>Appointment Reminders</h4>
+                                            <p>Receive reminders before your appointments</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="appointmentReminders" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>Appointment Confirmations</h4>
+                                            <p>Receive confirmations when appointments are booked</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="appointmentConfirmations" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-category">
+                                    <h3>Medications</h3>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>Medication Reminders</h4>
+                                            <p>Receive reminders to take your medications</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="medicationReminders" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>Refill Alerts</h4>
+                                            <p>Receive alerts when medications need refilling</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="refillAlerts" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-category">
+                                    <h3>General</h3>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>Health Tips</h4>
+                                            <p>Receive periodic health tips and recommendations</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="healthTips" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="option-info">
+                                            <h4>News and Updates</h4>
+                                            <p>Receive updates about GhanaHealth+ services</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" name="newsUpdates" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Save Preferences</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

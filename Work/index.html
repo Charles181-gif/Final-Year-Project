@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhanaHealth+ - Quality Healthcare for Every Ghanaian</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>GhanaHealth+</h1>
+                    <p>Akwahosan ma obiara</p>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="doctors.html" class="nav-link">Find Doctors</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Interactive Search -->
+    <section class="hero">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1>Quality Healthcare for Every Ghanaian</h1>
+                <p>Connect with certified doctors from the comfort of your home. 
+                   <span class="highlight">Affordable, Accessible, Available 24/7</span>
+                </p>
+                
+                <div class="search-doctors">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-tab="general">General Doctor</button>
+                        <button class="search-tab" data-tab="specialist">Specialist</button>
+                        <button class="search-tab" data-tab="emergency">Emergency</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search by specialty, symptom, or doctor name">
+                        <select>
+                            <option value="">Location (All Ghana)</option>
+                            <option value="accra">Accra</option>
+                            <option value="kumasi">Kumasi</option>
+                            <option value="tamale">Tamale</option>
+                            <option value="takoradi">Takoradi</option>
+                        </select>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-search"></i> Find Help
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="images/hero-doctor.png" alt="Doctor consultation">
+                <div class="verified-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Ghana Medical Association Doctors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats with Counter Animation -->
+    <section class="quick-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Certified Doctors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10000">0</div>
+                    <div class="stat-label">Happy Patients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">/7 Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">% Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Interactive Cards -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Healthcare Services</h2>
+                <p>Comprehensive solutions tailored for Ghana's healthcare needs</p>
+                <a href="services.html" class="btn btn-outline">View All Services</a>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Instant Doctor Chat</h3>
+                    <p>Chat with qualified doctors in English or Twi. Get immediate medical advice.</p>
+                    <div class="service-footer">
+                        <div class="service-price">From GH₵20</div>
+                        <button class="btn btn-outline btn-small">Learn More</button>
+                    </div>
+                    <div class="service-hover">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>15-minute chat consultation</li>
+                            <li>Prescription if needed</li>
+                            <li>Follow-up recommendations</li>
+                        </ul>
+                        <button class="btn btn-primary btn-small">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- More service cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works - Interactive Steps -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How GhanaHealth+ Works</h2>
+                <p>Get quality healthcare in just a few simple steps</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Account</h3>
+                    <p>Register as a patient or doctor</p>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <h3>Find a Healthcare Provider</h3>
+                    <p>Search by specialty or symptoms</p>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <h3>Book Your Appointment</h3>
+                    <p>Choose time and consultation type</p>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <h3>Receive Care</h3>
+                    <p>Get treatment and follow-up</p>
+                </div>
+            </div>
+            
+            <div class="step-content">
+                <div class="step-panel active" data-step="1">
+                    <div class="panel-content">
+                        <img src="images/step1.png" alt="Create account">
+                        <div class="panel-text">
+                            <h4>Join GhanaHealth+ in Minutes</h4>
+                            <p>Sign up as a patient to access healthcare services or register as a medical professional to join our network of providers.</p>
+                            <a href="register.html" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More step panels... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials with Interactive Slider -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+                <p>Real stories from real people across Ghana</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>
+                            "Medaase! This platform helped me consult with a specialist without traveling to Korle-Bu. Very convenient!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/user1.jpg" alt="Akosua Mensah">
+                            <div>
+                                <strong>Akosua Mensah</strong>
+                                <span>Accra</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- More testimonials... -->
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App CTA with Interactive Demo -->
+    <section class="mobile-app">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>Download Our Mobile App</h2>
+                    <p>Access healthcare services on the go with the GhanaHealth+ mobile app. Available for Android and iOS devices.</p>
+                    <div class="app-features">
+                        <div class="feature">
+                            <i class="fas fa-bell"></i>
+                            <span>Appointment Reminders</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-pills"></i>
+                            <span>Medication Tracking</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-video"></i>
+                            <span>Video Consultations</span>
+                        </div>
+                    </div>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <img src="images/google-play.png" alt="Get on Google Play">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="images/app-store.png" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-demo">
+                    <div class="phone-mockup">
+                        <img src="images/phone-mockup.png" alt="GhanaHealth+ App">
+                        <div class="app-screen active" data-screen="1">
+                            <img src="images/app-screen1.jpg" alt="App Screen 1">
+                        </div>
+                        <!-- More app screens... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Interactive Elements -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span>GhanaHealth+</span>
+                    </div>
+                    <p>Making quality healthcare accessible to every Ghanaian, wherever they are.</p>
+                    <div class="newsletter">
+                        <h4>Subscribe to our Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- More footer sections... -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 GhanaHealth+. All rights reserved. | Akwahosan ma obiara</p>
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <select>
+                        <option value="en">English</option>
+                        <option value="tw">Twi</option>
+                        <option value="ga">Ga</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comment-medical"></i>
+            <span>Need Help?</span>
+        </button>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h4>Chat Support</h4>
+                <button class="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

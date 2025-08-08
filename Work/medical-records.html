@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records - GhanaHealth+</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medical-records.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (same as dashboard) -->
+        
+        <main class="dashboard-main">
+            <!-- Header (same as dashboard) -->
+            
+            <div class="dashboard-content">
+                <div class="page-header">
+                    <h1>Medical Records</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-primary" id="addRecordBtn">
+                            <i class="fas fa-plus"></i> Add Record
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Records Summary -->
+                <div class="records-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>24</h3>
+                            <p>Total Records</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>5</h3>
+                            <p>Hospitals/Clinics</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>8</h3>
+                            <p>Doctors</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>2020 - 2024</h3>
+                            <p>Time Span</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Records Filters -->
+                <div class="records-filters">
+                    <div class="search-records">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search records...">
+                    </div>
+                    
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label for="record-type">Record Type:</label>
+                            <select id="record-type">
+                                <option value="">All Types</option>
+                                <option value="consultation">Consultation Notes</option>
+                                <option value="lab">Lab Results</option>
+                                <option value="imaging">Imaging Reports</option>
+                                <option value="prescription">Prescriptions</option>
+                                <option value="vaccination">Vaccination Records</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="record-date">Date Range:</label>
+                            <input type="text" id="record-date" placeholder="Select date range">
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="record-doctor">Doctor:</label>
+                            <select id="record-doctor">
+                                <option value="">All Doctors</option>
+                                <option value="darko">Dr. Akosua Darko</option>
+                                <option value="osei">Dr. Kwame Osei</option>
+                                <!-- More doctors -->
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-outline" id="applyFilters">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Records Timeline -->
+                <div class="records-timeline">
+                    <div class="timeline-year">
+                        <h3>2024</h3>
+                        
+                        <div class="timeline-month">
+                            <h4>August</h4>
+                            
+                            <div class="record-card">
+                                <div class="record-date">
+                                    <div class="day">05</div>
+                                    <div class="month">AUG</div>
+                                </div>
+                                <div class="record-content">
+                                    <div class="record-header">
+                                        <h5>Follow-up Consultation</h5>
+                                        <div class="record-type consultation">
+                                            <i class="fas fa-stethoscope"></i>
+                                            <span>Consultation</span>
+                                        </div>
+                                    </div>
+                                    <div class="record-details">
+                                        <div class="detail">
+                                            <i class="fas fa-user-md"></i>
+                                            <span>Dr. Kwame Osei - Cardiologist</span>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Korle-Bu Teaching Hospital, Accra</span>
+                                        </div>
+                                        <div class="record-notes">
+                                            <p>Patient reports improved symptoms since last visit. Blood pressure well controlled on current medication. Recommended to continue Amlodipine 5mg daily and schedule follow-up in 3 months.</p>
+                                        </div>
+                                    </div>
+                                    <div class="record-actions">
+                                        <button class="btn btn-outline btn-small">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                        <button class="btn btn-outline btn-small">
+                                            <i class="fas fa-share-alt"></i> Share
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- More record cards -->
+                        </div>
+                    </div>
+                    
+                    <!-- More timeline years -->
+                </div>
+                
+                <!-- No Records State -->
+                <div class="empty-state" style="display: none;">
+                    <img src="images/no-records.svg" alt="No records">
+                    <h3>No Medical Records Found</h3>
+                    <p>You don't have any medical records yet. Records from your GhanaHealth+ consultations will appear here automatically.</p>
+                    <button class="btn btn-primary" id="addFirstRecord">
+                        <i class="fas fa-plus"></i> Add Your First Record
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Record Modal -->
+    <div class="modal add-record-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3>Add Medical Record</h3>
+            </div>
+            <div class="modal-body">
+                <form id="addRecordForm">
+                    <div class="form-group">
+                        <label for="record-title">Record Title*</label>
+                        <input type="text" id="record-title" placeholder="e.g. Annual Physical, Lab Results" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="record-date">Date*</label>
+                            <input type="date" id="record-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="record-type">Record Type*</label>
+                            <select id="record-type" required>
+                                <option value="">Select type</option>
+                                <option value="consultation">Consultation Notes</option>
+                                <option value="lab">Lab Results</option>
+                                <option value="imaging">Imaging Reports</option>
+                                <option value="prescription">Prescriptions</option>
+                                <option value="vaccination">Vaccination Records</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="record-doctor">Doctor/Provider (optional)</label>
+                        <input type="text" id="record-doctor" placeholder="Doctor's name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="record-facility">Hospital/Clinic (optional)</label>
+                        <input type="text" id="record-facility" placeholder="Facility name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="record-notes">Notes (optional)</label>
+                        <textarea id="record-notes" rows="4" placeholder="Add any important notes about this record"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Upload Files*</label>
+                        <div class="file-upload">
+                            <input type="file" id="record-files" multiple>
+                            <label for="record-files" class="upload-area">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h4>Drag & Drop files here or click to browse</h4>
+                                <p>Supports PDF, JPG, PNG (Max 10MB each)</p>
+                            </label>
+                            <div class="upload-preview"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline close-modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Record</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/medical-records.js"></script>
+</body>
+</html>

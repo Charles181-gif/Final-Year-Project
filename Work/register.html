@@ -1,0 +1,132 @@
+<!-- Add this to your register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - GhanaHealth+</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>GhanaHealth+</span>
+                </div>
+                <h1>Create Your Account</h1>
+                <p>Join thousands of Ghanaians using GhanaHealth+ for better healthcare</p>
+            </div>
+            
+            <form id="registrationForm" class="auth-form">
+                <div class="form-group">
+                    <label for="userType">I am a:</label>
+                    <div class="user-type-selector">
+                        <input type="radio" id="patient" name="userType" value="patient" checked>
+                        <label for="patient">Patient</label>
+                        
+                        <input type="radio" id="doctor" name="userType" value="doctor">
+                        <label for="doctor">Doctor</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0241234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" minlength="8" required>
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <span class="strength-bar"></span>
+                        <span class="strength-bar"></span>
+                        <span class="strength-bar"></span>
+                        <span class="strength-text"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Doctor-specific fields (shown when doctor is selected) -->
+                <div id="doctorFields" class="doctor-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="specialty">Medical Specialty</label>
+                        <select id="specialty" name="specialty">
+                            <option value="">Select specialty</option>
+                            <option value="general">General Practitioner</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="obgyn">OB/GYN</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="dermatology">Dermatology</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="licenseNumber">Medical License Number</label>
+                        <input type="text" id="licenseNumber" name="licenseNumber">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hospital">Hospital/Clinic</label>
+                        <input type="text" id="hospital" name="hospital">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="yearsExperience">Years of Experience</label>
+                        <input type="number" id="yearsExperience" name="yearsExperience" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+
+                <div class="auth-footer">
+                    Already have an account? <a href="login.html">Log in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
